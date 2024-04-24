@@ -29,7 +29,7 @@ const Sidebar = () => {
                 pathname === link.path
                   ? "bg-white translate-x-[4rem]"
                   : "hover:text-secondary  hover:bg-white"
-              } mb-5  rounded-lg p-4 ${tailwindEffect}`}
+              } mb-5  rounded-lg p-3 ${tailwindEffect}`}
               style={{
                 color: pathname === link.path ? "#FF392B" : "#8880CF",
                 boxShadow:

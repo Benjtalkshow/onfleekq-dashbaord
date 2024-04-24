@@ -30,7 +30,7 @@ const DashboardHeader = ({ toggleDashboard }) => {
         {/* input */}
         <div className="inputDiv flex gap-2 px-3 w-[45%] focus-within:border-secondary border-transparent border-[1px]  items-center rounded-lg bg-background">
           <Search className="text-primary" />
-          <Input className="bg-transparent border-0 input" />
+          <Input className="bg-transparent placeholder:text-slate-500 border-0 input" type="text" placeholder="Search" />
         </div>
 
         {/* links */}
