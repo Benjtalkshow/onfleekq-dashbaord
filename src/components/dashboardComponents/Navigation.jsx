@@ -7,8 +7,8 @@ const Navigation = () => {
   const { activeTab, setActiveTab } = useContext(NavigationContext);
 
   return (
-    <section className="custom1:hidden justify-center flex">
-      <div className="rounded-lg  bg-background w-fit pb-2 px-[2px]">
+    <section className="custom1:hidden justify-center flex relative">
+      <div className="rounded-lg fixed z-10  bg-background w-fit pb-2 px-[2px]">
         <div className="m-auto rounded-lg bg-white shadow-md hover:shadow-lg flex justify-center items-center gap-2 text-center">
           <div
             className={`cursor-pointer ${
