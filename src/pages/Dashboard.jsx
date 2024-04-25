@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { littleCardData, tailwindEffect } from "../data/data";
 import LittleCard from "../components/dashboardComponents/LittleCard";
 import React from "react";
@@ -6,10 +6,10 @@ import Navigation from "../components/dashboardComponents/Navigation";
 import Statistics from "../components/dashboardComponents/Statistics";
 import SpentTime from "../components/dashboardComponents/SpentTime";
 import Explore from "../components/dashboardComponents/Explore";
-import { NavigationContext } from "../context/NavigationContext";
+import { useNavigator } from "../context/NavigationContext";
 
 const Dashboard = () => {
-  const { activeTab } = useContext(NavigationContext);
+  const { activeTab } = useNavigator();
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -40,6 +40,7 @@ const Dashboard = () => {
                 />
               ))}
             </div>
+
             {/* statistics */}
             <Statistics />
 

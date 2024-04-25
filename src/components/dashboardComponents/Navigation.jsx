@@ -1,10 +1,11 @@
+import { useNavigator } from "../../context/NavigationContext";
 import { BarChart, LayoutTemplate } from "lucide-react";
-import React, { useContext } from "react";
-import { NavigationContext } from "../../context/NavigationContext";
+import React from "react";
 
 
 const Navigation = () => {
-  const { activeTab, setActiveTab } = useContext(NavigationContext);
+  const { activeTab, setActiveTab } = useNavigator();
+  
 
   return (
     <section className="custom1:hidden justify-center flex relative">

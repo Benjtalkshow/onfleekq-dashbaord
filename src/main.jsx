@@ -1,14 +1,15 @@
-import React from "react";
+import React  from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { NavigationProvider } from "./context/NavigationContext.jsx";
+import Providers from "./context/Provider/Providers.jsx";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <NavigationProvider>
+  <Providers>
     <React.StrictMode>
       <App />
     </React.StrictMode>
     ,
-  </NavigationProvider>
+  </Providers>
 );

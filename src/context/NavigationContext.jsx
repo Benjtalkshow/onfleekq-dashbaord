@@ -1,8 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const NavigationContext = createContext();
+export const useNavigator = () => useContext(NavigationContext);
 
-const NavigationProvider = ({ children }) => {
+export const NavigationProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -11,5 +12,3 @@ const NavigationProvider = ({ children }) => {
     </NavigationContext.Provider>
   );
 };
-
-export { NavigationContext, NavigationProvider };
