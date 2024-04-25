@@ -3,18 +3,12 @@ import { Input } from "./ui/input";
 import { Bell, Search } from "lucide-react";
 import { dashboardHeaderLinks, tailwindEffect } from "../data/data";
 import { Link, useLocation } from "react-router-dom";
-import Avatar from "../assets/avatar1.png";
+import Profile from "./Profile";
 
-const DashboardHeader = ({ toggleDashboard }) => {
+const Header = ({ toggleDashboard }) => {
   const { pathname } = useLocation();
   const [viewProfile, setViewProfile] = useState(false);
 
-  const showProfile = () => {
-    setViewProfile(true);
-  };
-  const hideProfile = () => {
-    setViewProfile(false);
-  };
   return (
     <div
       className={`${tailwindEffect} w-full flex items-center justify-between`}
@@ -57,7 +51,7 @@ const DashboardHeader = ({ toggleDashboard }) => {
           <Bell size={26} className="cursor-pointer" />
         </div>
 
-        <div
+        {/* <div
           onClick={viewProfile ? hideProfile : showProfile}
           className={` profile overflow-hidden   cursor-pointer bg-info rounded-[1rem]  w-fit h-fit`}
         >
@@ -70,10 +64,11 @@ const DashboardHeader = ({ toggleDashboard }) => {
           {viewProfile && (
             <div className={`bg-background shadow-md left-7 top-12 p-10 absolute`}></div>
           )}
-        </div>
+        </div> */}
+        <Profile viewProfile={viewProfile} setViewProfile={setViewProfile} />
       </div>
     </div>
   );
 };
 
-export default DashboardHeader;
+export default Header;

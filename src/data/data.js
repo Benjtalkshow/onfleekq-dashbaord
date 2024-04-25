@@ -1,4 +1,12 @@
-import { Home, MessagesSquare, PieChart, Wallet } from "lucide-react";
+import {
+  CirclePlay,
+  Clock2,
+  Home,
+  MessagesSquare,
+  PieChart,
+  Star,
+  Wallet,
+} from "lucide-react";
 
 export const links = [
   { link: "Home", path: "/", icons: Home },
@@ -17,6 +25,24 @@ export const littleCardData = [
   { title: "visitors", stat: "10,320" },
   { title: "customers", stat: "4,628" },
   { title: "orders", stat: "2,980" },
+];
+
+export const exploreData = [
+  {
+    icon: CirclePlay,
+    color: "text-primary",
+    text: "Video",
+  },
+  {
+    icon: Clock2,
+    color: "text-info",
+    text: "15 mins",
+  },
+  {
+    icon: Star,
+    color: "text-secondary",
+    text: "12 likes",
+  },
 ];
 
 export const tailwindEffect = `transition-all duration-500 ease-in-out transform`;

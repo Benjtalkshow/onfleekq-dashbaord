@@ -2,7 +2,6 @@ import { createContext, useContext, useState } from "react";
 
 const NavigationContext = createContext();
 export const useNavigator = () => useContext(NavigationContext);
-
 export const NavigationProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState(0);
 

@@ -6,7 +6,6 @@ import React from "react";
 const Navigation = () => {
   const { activeTab, setActiveTab } = useNavigator();
   
-
   return (
     <section className="custom1:hidden justify-center flex relative">
       <div className="rounded-lg fixed z-10  bg-background w-fit pb-2 px-[2px]">

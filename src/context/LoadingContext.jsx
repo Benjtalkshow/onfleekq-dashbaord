@@ -1,9 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
 const LoadingContext = createContext();
-
 export const useLoading = () => useContext(LoadingContext);
-
 export const LoadingProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
