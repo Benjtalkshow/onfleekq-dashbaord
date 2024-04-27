@@ -13,3 +13,23 @@
     transform: translateY(0);
   }
 }
+
+
+.display {
+  position: relative;
+  background-color: #FF392B; 
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.display::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: #FF392B transparent transparent transparent; 
+}

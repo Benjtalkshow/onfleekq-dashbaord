@@ -1,89 +1,20 @@
-import React, { useState, useEffect } from "react";
-import ReactApexChart from "react-apexcharts";
+import React, { useState } from "react";
+import SpentTimeChart from "./SpentTimeChart";
+import "../../assets/css/animate.css"
 
-const SpentTime = () => {
-  const [series, setSeries] = useState([
-    {
-      name: "series1",
-      data: [31, 40, 28, 51, 42, 109, 100]
-    }
-  ]);
-
-  const [options, setOptions] = useState({
-    chart: {
-      height: 200,
-      type: "area",
-      toolbar: {
-        show: false 
-      },
-      events: {
-        dataPointSelection: (event, chartContext, config) => {
-          setSelectedDay(config.dataPointIndex);
-        }
-      }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    stroke: {
-      curve: "smooth"
-    },
-    xaxis: {
-      categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      labels: {
-        style: {
-          colors: ["#666", "#666", "#666", "#666", "#666", "#666", "#666"]
-        },
-        offsetX: 0,
-        offsetY: 5,
-        style: {
-          fontSize: '14px',
-          fontFamily: 'Helvetica, Arial, sans-serif',
-          cursor: 'pointer'
-        }
-      }
-    },
-    yaxis: {
-      show: false
-    },
-    grid: {
-      show: false
-    },
-    tooltip: {
-      x: {
-        format: "dd/MM/yy HH:mm"
-      }
-    }
-  });
-
-  const [selectedDay, setSelectedDay] = useState(1); // Default to Monday
-
-  const updateOptions = () => {
-    try {
-      const newOptions = { ...options };
-      newOptions.xaxis.labels.style.colors = options.xaxis.categories.map((day, index) => (index === selectedDay ? "#FF0000" : "#666"));
-      setOptions(newOptions);
-    } catch (error) {
-      console.error("Error updating options:", error);
-    }
-  };
-
-  useEffect(() => {
-    updateOptions();
-  }, [selectedDay]);
-
+const SpentTime = ({ value = "12hr: 10min" }) => {
   return (
-    <section className={`w-full h-fit rounded-lg bg-background pb-2 px-[2px]`} >
-      <div className="rounded-lg bg-white">
-        <div>
-          <div id="chart">
-            {options && series ? (
-              <ReactApexChart options={options} series={series} type="area" height={200} />
-            ) : (
-              <div>Loading...</div>
-            )}
-          </div>
+    <section className={`w-full h-fit rounded-lg bg-background  px-[2px]`}>
+      <div className="rounded-lg bg-white relative">
+        <h1 className="font-semibold text-left  px-2 py-5 text-[1.1rem]">
+          Spent Time
+        </h1>
+        <div className="bg-background rounded-xl px-[2px] pb-1 w-fit absolute right-5 top-5">
+        <div className="display bg-secondary p-2 rounded-xl border-0  text-white text-center">
+          {value}
         </div>
+        </div>
+        <SpentTimeChart />
       </div>
     </section>
   );
