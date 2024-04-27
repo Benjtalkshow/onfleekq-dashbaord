@@ -1,8 +1,10 @@
+import { tailwindEffect } from "../../data/data";
 import React from "react";
 
 const CardSvg = ({name, code, date}) => {
   return (
     <svg
+    className={`${tailwindEffect} hover:rotate-[360deg]`}
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     viewBox="0 0 850 850"

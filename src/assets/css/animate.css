@@ -1,5 +1,5 @@
 .bounce {
-  animation: bounce 3s infinite;
+  animation: bounce 8s  infinite;
 }
 
 @keyframes bounce {
