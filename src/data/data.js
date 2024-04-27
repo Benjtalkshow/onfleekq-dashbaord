@@ -1,9 +1,12 @@
 import {
+  CarTaxiFront,
   CirclePlay,
   Clock2,
+  Film,
   Home,
   MessagesSquare,
   PieChart,
+  ShoppingBag,
   Star,
   Wallet,
 } from "lucide-react";
@@ -43,6 +46,12 @@ export const exploreData = [
     color: "text-secondary",
     text: "12 likes",
   },
+];
+
+export const transactionData = [
+  { icon: CarTaxiFront, expense: 'Taxi', time:"1:12 PM", price: "-$9.20" },
+  { icon: ShoppingBag, expense: "Shopping", time: "11:15 AM", price: "-$142.00" },
+  { icon: Film, expense: "Netflix" , time : "Jan, 10, 2020", price: "-$24.99" },
 ];
 
 export const tailwindEffect = `transition-all duration-500 ease-in-out transform`;

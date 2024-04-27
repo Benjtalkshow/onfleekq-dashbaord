@@ -41,7 +41,7 @@ const Sidebar = () => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <link.icons className="" />
+                    <link.icons className="group-hover:rotate-[360deg] group-hover:scale-150" />
                   </TooltipTrigger>
                   <TooltipContent>
                     <p className="text-black shadow-md bg-background px-2 py-1 rounded-lg">

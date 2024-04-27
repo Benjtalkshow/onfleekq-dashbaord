@@ -1,0 +1,25 @@
+{/* <div className="flex justify-center items-center mt-10">
+        <div className="relative w-64 h-64 rounded-full">
+          <div className="absolute inset-0 rounded-full overflow-hidden">
+            <div
+              className="h-full w-full bg-no-repeat"
+              style={{
+                background: `conic-gradient(blue ${
+                  38 * 3.6
+                }deg, transparent 0deg)`,
+              }}
+            ></div>
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-white p-10 rounded-full">
+              <div className="bg-background pb-1 rounded-full">
+                <div className="shadow-md grid p-[5.3rem] place-content-center text-center bg-white rounded-full w-32 h-32">
+                  <h1 className="percent text-4xl text-primary font-bold">
+                    38<span className="text-xl">%</span>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
