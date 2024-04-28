@@ -1,11 +1,12 @@
+// LittleCardCharts.js
 import React, { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const LittleCardCharts = ({ color, fill }) => {
+const LittleCardCharts = ({ color, fill, stat, title }) => {
   const [series, setSeries] = useState([
     {
-      name: "series1",
-      data: [31, 40, 28, 51, 42, 109, 100],
+      name: title,
+      data: stat.split(",").map(s => parseInt(s.trim())),
       color: fill, 
       fill: { type: "solid", color: fill }, 
     },

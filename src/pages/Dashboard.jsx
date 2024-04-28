@@ -39,19 +39,15 @@ const Dashboard = () => {
             >
               {littleCardData.map((data, index) => (
                 <LittleCard
-                  chart={data.charts}
-                  index={index}
+                chart={data.charts}
+                index={index}
                   title={data.title}
                   logic={
                     index === littleCardData.length - 1
                       ? "bg-secondary"
                       : "bg-white"
                   }
-                  color={
-                    index === littleCardData.length - 1
-                      ? "text-white"
-                      : "text-black"
-                  }
+                  color={index === littleCardData.length - 1 ? 'text-white' : 'text-black'}
                   stat={data.stat}
                   key={index}
                   style={
@@ -59,9 +55,8 @@ const Dashboard = () => {
                       ? "text-white sm:text-black"
                       : "text-[#3326AE] sm:text-black"
                   }
-                  chartColorProp={
-                    index === littleCardData.length - 1 ? "#3326AE" : "#FFFFFF"
-                  }
+                  chartColorProp={index === littleCardData.length - 1 ? "#3326AE" : "#FFFFFF"} 
+
                 />
               ))}
             </div>
@@ -87,19 +82,6 @@ const Dashboard = () => {
             <PercentageTracker />
             <CreditCard />
             <Transaction transaction={transactionData} />
-            {/* <svg
-              width="200"
-              height="50"
-              viewBox="0 0 200 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10,50 C40,80 160,20 190,50"
-                stroke="navy"
-                stroke-width="5"
-                fill="none"
-              />
-            </svg> */}
           </div>
         )}
       </div>

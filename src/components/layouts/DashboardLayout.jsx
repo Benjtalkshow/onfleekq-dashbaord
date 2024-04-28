@@ -24,7 +24,7 @@ const DashboardLayout = ({ children, toggleDashboard = true }) => {
           }`}
         >
           {toggleDashboard && <Sidebar />}
-          <div className="w-full overflow-x-auto bg-white h-full  rounded-l-[3rem]  px-5 custom1:px-14 py-0 custom1:py-10 relative">
+          <div className="w-full overflow-x-auto bg-white  rounded-l-[3rem]  px-5 custom1:px-14 py-0 custom1:py-10 relative">
             <Header toggleDashboard={toggleDashboard} />
             {children}
             <MobileNav />
