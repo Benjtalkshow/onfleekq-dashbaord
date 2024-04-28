@@ -2,6 +2,7 @@ import React from "react";
 import Chart from "react-apexcharts";
 import { colors } from "../../lib/colors";
 
+
 function Statistics() {
   const series = [
     {
@@ -43,8 +44,28 @@ function Statistics() {
     xaxis: {
       type: "category",
       categories: [
-        "Nov", "", "", "Dec", "", "", "Jan", "", "", "Feb", "", "",
-        "Mar", "", "", "Apr", "", "", "May", "", "", "Jun"
+        "Nov",
+        "",
+        "",
+        "Dec",
+        "",
+        "",
+        "Jan",
+        "",
+        "",
+        "Feb",
+        "",
+        "",
+        "Mar",
+        "",
+        "",
+        "Apr",
+        "",
+        "",
+        "May",
+        "",
+        "",
+        "Jun",
       ],
       lines: {
         show: false,
@@ -84,11 +105,21 @@ function Statistics() {
   };
 
   return (
-      <div className="w-full mt-5 bg-background rounded-lg text-center pb-2 px-[2px]">
-        <div className="bg-white rounded-lg">
-          <Chart options={options} series={series} type="candlestick" />
+    <div className="w-full mt-5 bg-background rounded-lg text-center pb-2 px-[2px]">
+      <div className="bg-background rounded-lg">
+        <div className="px-3 pt-5 flex justify-between items-center">
+          <h1 className="font-semibold text-lg text-black text-left">
+            Statistics
+          </h1>
+
+          <select className="bg-white text-primary rounded-2xl outline-none cursor-pointer py-2 px-6">
+            <option value="year">Year</option>
+            <option value="month">Month</option>
+          </select>
         </div>
+        <Chart options={options} series={series} type="candlestick" />
       </div>
+    </div>
   );
 }
 
