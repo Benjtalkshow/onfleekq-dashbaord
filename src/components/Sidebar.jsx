@@ -12,10 +12,10 @@ const Sidebar = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="z-10 relative hidden md:flex w-[150px] h-screen flex-col bg-primary">
+    <div className="z-10 relative hidden md:flex w-[180px] h-screen flex-col bg-primary">
       {/* logo */}
       <div className="">
-        <h1 className="text-white font-bold my-10 text-3xl text-center ">
+        <h1 className="text-white font-bold my-10 text-2xl text-center ">
           Logo
         </h1>
       </div>

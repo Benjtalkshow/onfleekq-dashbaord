@@ -1,3 +1,4 @@
+import LittleCardCharts from "../components/rightGrid/LittleCardCharts";
 import {
   CarTaxiFront,
   CirclePlay,
@@ -25,9 +26,9 @@ export const dashboardHeaderLinks = [
 ];
 
 export const littleCardData = [
-  { title: "visitors", stat: "10,320" },
-  { title: "customers", stat: "4,628" },
-  { title: "orders", stat: "2,980" },
+  { title: "visitors", stat: "10,320",charts:  LittleCardCharts },
+  { title: "customers", stat: "4,628",charts:  LittleCardCharts },
+  { title: "orders", stat: "2,980",charts:  LittleCardCharts },
 ];
 
 export const exploreData = [

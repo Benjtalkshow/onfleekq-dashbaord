@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const SpentTimeChart = () => {
+const LittleCardCharts = ({ color, fill }) => {
   const [series, setSeries] = useState([
     {
       name: "series1",
       data: [31, 40, 28, 51, 42, 109, 100],
-      color: "#C3E8EF",
-      fill: { type: "solid", color: "#666" },
+      color: fill, 
+      fill: { type: "solid", color: fill }, 
     },
   ]);
 
   const [options, setOptions] = useState({
     chart: {
-      height: 200,
+      height: 100,
+      width: 150,
       type: "area",
       toolbar: { show: false },
       events: {
@@ -23,20 +24,14 @@ const SpentTimeChart = () => {
       },
     },
     dataLabels: { enabled: false },
-    stroke: { curve: "smooth", colors: ["#FF0000"] },
+    stroke: { curve: "smooth", colors: [color] },
     xaxis: {
-      categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      categories: [],
       labels: {
-        style: {
-          colors: ["#666", "#666", "#666", "#666", "#666", "#666", "#666"],
-        },
-        offsetX: 0,
-        offsetY: 5,
-        style: {
-          fontSize: "14px",
-          fontFamily: "Helvetica, Arial, sans-serif",
-          cursor: "pointer",
-        },
+        show: false,
+      },
+      axisTicks: {
+        show: false,
       },
     },
     yaxis: { show: false },
@@ -62,25 +57,22 @@ const SpentTimeChart = () => {
   }, [selectedDay]);
 
   return (
-    <section className={`w-full h-fit rounded-lg bg-background pb-2 px-[2px]`}>
-      <div className="rounded-lg bg-white">
-        <div>
-          <div id="chart">
-            {options && series ? (
-              <ReactApexChart
-                options={options}
-                series={series}
-                type="area"
-                height={180}
-              />
-            ) : (
-              <div>Loading...</div>
-            )}
-          </div>
-        </div>
+    <div style={{ padding: 0, margin: 0 }}>
+      <div id="chart">
+        {options && series ? (
+          <ReactApexChart
+            options={options}
+            series={series}
+            type="area"
+            height={100}
+            width={150}
+          />
+        ) : (
+          <div>Loading...</div>
+        )}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default SpentTimeChart;
+export default LittleCardCharts;

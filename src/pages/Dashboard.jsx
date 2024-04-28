@@ -39,11 +39,18 @@ const Dashboard = () => {
             >
               {littleCardData.map((data, index) => (
                 <LittleCard
+                  chart={data.charts}
+                  index={index}
                   title={data.title}
                   logic={
                     index === littleCardData.length - 1
                       ? "bg-secondary"
                       : "bg-white"
+                  }
+                  color={
+                    index === littleCardData.length - 1
+                      ? "text-white"
+                      : "text-black"
                   }
                   stat={data.stat}
                   key={index}
@@ -51,6 +58,9 @@ const Dashboard = () => {
                     index === littleCardData.length - 1
                       ? "text-white sm:text-black"
                       : "text-[#3326AE] sm:text-black"
+                  }
+                  chartColorProp={
+                    index === littleCardData.length - 1 ? "#3326AE" : "#FFFFFF"
                   }
                 />
               ))}
