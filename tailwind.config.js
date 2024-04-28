@@ -43,7 +43,7 @@ module.exports = {
         white: "#FFFFFF",
       },
       screens: {
-        "custom1": "912px", 
+        "custom1": "1130px", 
       },
     },
   },

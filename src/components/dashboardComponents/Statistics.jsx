@@ -108,7 +108,7 @@ function Statistics() {
     <div className="w-full mt-5 bg-background rounded-lg text-center pb-2 px-[2px]">
       <div className="bg-background rounded-lg">
         <div className="px-3 pt-5 flex justify-between items-center">
-          <h1 className="font-semibold text-lg text-black text-left">
+          <h1 className="font-bold text-lg text-black text-left">
             Statistics
           </h1>
 

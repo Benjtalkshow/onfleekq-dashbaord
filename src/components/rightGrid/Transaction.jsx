@@ -13,7 +13,7 @@ const Transaction = ({transaction, showIcon= true}) => {
   return (
     <div className="">
       <div className="flex justify-between items-center">
-        <h1 className="transaction text-[1.1rem] font-semibold">Transaction</h1>
+        <h1 className="transaction text-lg font-bold">Transaction</h1>
         <Button className="bg-secondary cursor-pointer w-fit h-fit hover:bg-red-800 text-white rounded-lg p-2">
           <Plus size={20} />
         </Button>

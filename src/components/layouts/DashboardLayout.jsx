@@ -20,7 +20,7 @@ const DashboardLayout = ({ children, toggleDashboard = true }) => {
       ) : (
         <section
           className={`w-full h-full fixed flex  ${
-            toggleDashboard ? "bg-white md:bg-primary" : "bg-white"
+            toggleDashboard ? "bg-white custom1:bg-primary" : "bg-white"
           }`}
         >
           {toggleDashboard && <Sidebar />}
